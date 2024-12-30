@@ -4,8 +4,8 @@ const Book = require("../models/book");
 // creates a author in database
 exports.addAuthor = async (req, res) => {
   try {
-    const { name } = req.body;
-    const author = await Author.create({ name });
+    const { name,role="Author" } = req.body;
+    const author = await Author.create({ name,role });
     res.status(201).json({ messege: "author created successfully!", author });
   } catch (error) {
     res

@@ -1,6 +1,5 @@
 const Author = require("../models/author");
 const Book = require("../models/book");
-
 // Add a book
 
 exports.addBook = async (req, res) => {
